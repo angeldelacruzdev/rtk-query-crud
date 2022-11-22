@@ -19,28 +19,10 @@
       "complete": false
     },
     {
-      "name": "Papa con yuca y huevo",
-      "description": "dsdsd",
+      "name": "Task 4",
+      "description": "Task description 4",
       "complete": "on",
       "id": 4
-    },
-    {
-      "name": "eqwe",
-      "description": "sdasd",
-      "complete": "on",
-      "id": 5
-    },
-    {
-      "name": "a",
-      "description": "a",
-      "complete": "on",
-      "id": 6
-    },
-    {
-      "name": "Hola mundo",
-      "description": "si",
-      "complete": "on",
-      "id": 7
     }
   ]
 }
