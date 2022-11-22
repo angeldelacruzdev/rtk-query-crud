@@ -1,10 +1,14 @@
 import React from "react";
-import { useGetTasksQuery, useDeleteTaskMutation } from "../api/apiSlice";
+import {
+  useGetTasksQuery,
+  useDeleteTaskMutation,
+  useUpdateTaskMutation,
+} from "../api/apiSlice";
 
 const TasksLists = () => {
   const { data: tasks, isError, isLoading, error } = useGetTasksQuery();
   const [deleteTask] = useDeleteTaskMutation();
-
+  const [updateTask] = useUpdateTaskMutation();
   if (isLoading) {
     return (
       <>
@@ -28,7 +32,17 @@ const TasksLists = () => {
           <button onClick={() => deleteTask(task.id)}>Delete</button>
           <label htmlFor={task.id}>
             Complete
-            <input type="checkbox" id={task.id} />
+            <input
+              type="checkbox"
+              id={task.id}
+              defaultChecked={task.complete}
+              onChange={(e) => {
+                updateTask({
+                  ...task,
+                  complete: e.target.checked,
+                });
+              }}
+            />
           </label>
         </li>
       ))}

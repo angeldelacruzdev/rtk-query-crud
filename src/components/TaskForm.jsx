@@ -9,7 +9,7 @@ const TaskForm = () => {
 
     const name = e.target.elements.name.value.trim();
     const description = e.target.elements.description.value.trim();
-    const complete = e.target.elements.complete.value;
+    const complete = e.target.elements.complete.checked;
 
     createTask({
       name,
